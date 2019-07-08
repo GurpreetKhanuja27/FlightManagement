@@ -47,4 +47,11 @@ public class FlightDAOImpl implements FlightDAO {
 		
 	}
 
+	@Override
+	public void deleteFlightById(int id) {
+		
+		Flight f = em.find(Flight.class,id); //select query
+		em.remove(f); // delete query
+	}
+
 }

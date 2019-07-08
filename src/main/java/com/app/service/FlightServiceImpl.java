@@ -38,4 +38,11 @@ public class FlightServiceImpl implements FlightService{
 		
 	}
 
+	@Override
+	public void deleteFlightById(int id) {
+		
+		dao.deleteFlightById(id);
+		
+	}
+
 }
