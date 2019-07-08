@@ -10,4 +10,5 @@ public interface FlightDAO {
 	public List<Flight> getAllFlights();
 	public Flight getFlightById(int id);
 	public void editFlightById(int id, Flight flight);
+	public void deleteFlightById(int id);
 }

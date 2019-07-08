@@ -61,7 +61,11 @@ public class FlightController {
 		service.editFlightById(id,flight);
 	}
 	
-	
+
+	@RequestMapping(value="/{id}" , method = RequestMethod.DELETE)
+	public void deleteFlightById(@PathVariable int id) {
+		service.deleteFlightById(id);
+	}
 	
 	
 	
