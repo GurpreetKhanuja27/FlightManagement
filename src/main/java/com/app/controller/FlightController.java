@@ -52,4 +52,22 @@ public class FlightController {
 
 		return flight;
 	}
+	
+	
+	@RequestMapping(value ="/{id}", method = RequestMethod.PUT, consumes = {MediaType.APPLICATION_JSON_VALUE,
+			MediaType.APPLICATION_XML_VALUE})
+	public void editFlightById(@PathVariable int id,@RequestBody Flight flight) {
+		
+		service.editFlightById(id,flight);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

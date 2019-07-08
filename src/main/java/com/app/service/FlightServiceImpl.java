@@ -32,4 +32,10 @@ public class FlightServiceImpl implements FlightService{
 		return f;
 	}
 
+	@Override
+	public void editFlightById(int id, Flight flight) {
+		dao.editFlightById(id, flight);
+		
+	}
+
 }

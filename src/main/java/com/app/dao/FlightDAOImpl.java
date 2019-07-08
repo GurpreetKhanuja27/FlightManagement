@@ -37,4 +37,14 @@ public class FlightDAOImpl implements FlightDAO {
 		return f;
 	}
 
+	@Override
+	public void editFlightById(int id, Flight flight) {
+		
+		Flight f = em.find(Flight.class,id); //from db - select query 
+		f.setDescription(flight.getDescription());
+		f.setNumberofseats(flight.getNumberofseats());
+		em.persist(f); // update query  : persist : save/update
+		
+	}
+
 }
