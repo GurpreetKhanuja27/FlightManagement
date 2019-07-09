@@ -20,6 +20,8 @@ public class FlightController {
 	@Autowired
 	FlightService service;
 
+	
+	/// http://localhost:8080/controller/hi
 	@RequestMapping(value = "/hi", method = RequestMethod.GET)
 	public String sayHi() {
 		return "Hi";
@@ -43,6 +45,8 @@ public class FlightController {
 		return flights;
 	
 	}
+	
+	/// http://localhost:8080/controller/{id}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = { MediaType.APPLICATION_JSON_VALUE,
 			MediaType.APPLICATION_XML_VALUE})
@@ -66,12 +70,5 @@ public class FlightController {
 	public void deleteFlightById(@PathVariable int id) {
 		service.deleteFlightById(id);
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 }
